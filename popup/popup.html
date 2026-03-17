@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DRC to Postie</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>DRC to Postie</h1>
+
+      <div class="field">
+        <label for="category">Category</label>
+        <select id="category"></select>
+      </div>
+
+      <div class="field">
+        <label for="type">Type</label>
+        <select id="type"></select>
+      </div>
+
+      <div class="field">
+        <label for="title">Article Title</label>
+        <input type="text" id="title" placeholder="Auto-filled from page…" />
+      </div>
+
+      <div class="field">
+        <label for="excerpt">Excerpt</label>
+        <textarea id="excerpt" rows="4" placeholder="Paste or type excerpt…"></textarea>
+      </div>
+
+      <div class="field">
+        <label for="image">Image URL</label>
+        <input type="text" id="image" placeholder="Paste image URL…" />
+      </div>
+
+      <button id="send">Send to Postie</button>
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
