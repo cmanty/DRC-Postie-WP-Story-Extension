@@ -8,6 +8,9 @@ const CATEGORIES = [
 // Fill in the tags that get prepended to the email subject line.
 const TYPES = [
   { label: "Type Name", tag: "[TAG]" },
+  { label: "Regional Innovation Guide", tag: "[GUIDE]" },
+  { label: "Autonomous Trucking", tag: "[TRUCKING]" },
+  { label: "Food", tag: "[]"},
   // { label: "Another Type", tag: "[ANOTHER]" },
 ];
 // ─────────────────────────────────────────────────────────────────────────────
@@ -29,13 +32,11 @@ function buildMailto() {
   const type = JSON.parse(document.getElementById("type").value);
   const title = document.getElementById("title").value.trim();
   const excerpt = document.getElementById("excerpt").value.trim();
-  const image = document.getElementById("image").value.trim();
 
   const subject = `${type.tag} ${title}`;
 
   const bodyParts = [];
   if (excerpt) bodyParts.push(excerpt);
-  if (image) bodyParts.push(`Image: ${image}`);
   if (pageUrl) bodyParts.push(`Source: ${pageUrl}`);
   const body = bodyParts.join("\n\n");
 
