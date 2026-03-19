@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "description": "Send article listings to the Postie WordPress plugin via email.",
   "permissions": ["activeTab", "windows"],
+  "host_permissions": ["https://dfwinteractive.com/*"],
   "action": {},
   "background": {
     "service_worker": "background/service_worker.js"

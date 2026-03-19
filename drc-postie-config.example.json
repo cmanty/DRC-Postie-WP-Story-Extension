@@ -1,0 +1,62 @@
+[
+  {
+    "label": "Regional Innovation Guide",
+    "email": "success@dfwinteractive.com",
+    "types": [
+      { "label": "Funding", "tag": "[FUNDING]" },
+      { "label": "Exit", "tag": "[EXIT]" },
+      { "label": "HOF", "tag": "[HOF]" }
+    ]
+  },
+  {
+    "label": "Autonomous Trucking",
+    "email": "avtrucking@dfwinteractive.com",
+    "types": [
+      { "label": "Uncategorized", "tag": "[UNCATEGORIZED]" }
+    ]
+  },
+  {
+    "label": "Food",
+    "email": "food@dfwinteractive.com",
+    "types": [
+      { "label": "Manufacturing", "tag": "[MANUFACTURING]" },
+      { "label": "Supply Logistics", "tag": "[SUPPLY_LOGISTICS]" },
+      { "label": "Retail Restaurants", "tag": "[Retail_Restaurants]" }
+    ]
+  },
+  {
+    "label": "Life Sciences",
+    "email": "news@lifesciencedfw.com",
+    "types": [
+      { "label": "Investment", "tag": "[INVESTMENT]" },
+      { "label": "News", "tag": "[NEWS]" },
+      { "label": "Ranking", "tag": "[RANKING]" },
+      { "label": "Relocation", "tag": "[RELOCATION]" }
+    ]
+  },
+  {
+    "label": "Southern Dallas County",
+    "email": "southerndallas@dfwinteractive.com",
+    "types": [
+      { "label": "Business", "tag": "[BUSINESS]" },
+      { "label": "Balch Springs", "tag": "[BALCH SPRINGS]" },
+      { "label": "Cedar Hill", "tag": "[CEDAR HILL]" },
+      { "label": "Dallas", "tag": "[DALLAS]" },
+      { "label": "Desoto", "tag": "[DESOTO]" },
+      { "label": "Duncanville", "tag": "[DUNCANVILLE]" },
+      { "label": "Glenn Heights", "tag": "[GLENN HEIGHTS]" },
+      { "label": "Grand Prairie", "tag": "[GRAND PRAIRIE]" },
+      { "label": "Hutchins", "tag": "[HUTCHINS]" },
+      { "label": "Inland Port", "tag": "[INLAND PORT]" },
+      { "label": "Lancaster", "tag": "[LANCASTER]" },
+      { "label": "Mesquite", "tag": "[MESQUITE]" },
+      { "label": "Seagoville", "tag": "[SEAGOVILLE]" },
+      { "label": "Wilmer", "tag": "[WILMER]" },
+      { "label": "Community Impact", "tag": "[COMMUNITY IMPACT]" },
+      { "label": "Connectivity", "tag": "[CONNECTIVITY]" },
+      { "label": "Development", "tag": "[DEVELOPMENT]" },
+      { "label": "Editor's Picks", "tag": "[EDITOR'S PICKS]" },
+      { "label": "Living", "tag": "[LIVING]" }
+    ]
+  }
+]
