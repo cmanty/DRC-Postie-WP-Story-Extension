@@ -76,6 +76,6 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("send").addEventListener("click", () => {
     const mailto = buildMailto();
     window.open(mailto, "_self");
-    window.close();
+    setTimeout(() => window.close(), 500);
   });
 });
