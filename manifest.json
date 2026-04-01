@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "DRC to Postie",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Send article listings to the Postie WordPress plugin via email.",
   "permissions": ["activeTab", "windows"],
   "host_permissions": ["https://dfwinteractive.com/*"],

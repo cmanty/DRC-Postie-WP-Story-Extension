@@ -34,11 +34,13 @@ function buildMailto() {
   const checkedBoxes = document.querySelectorAll("#type-options input[type=checkbox]:checked");
   const selectedTags = Array.from(checkedBoxes).map((o) => JSON.parse(o.value).tag);
   const title = document.getElementById("title").value.trim();
+  const imageUrl = document.getElementById("image-url").value.trim();
   const excerpt = document.getElementById("excerpt").value.trim();
 
   const subject = `${selectedTags.join(" ")} ${title}`;
 
   const bodyParts = [];
+  if (imageUrl) bodyParts.push(`[PostIMG:${imageUrl}]`);
   if (excerpt) bodyParts.push(excerpt);
   if (pageUrl) bodyParts.push(`${pageUrl}`);
   bodyParts.push(":end");
