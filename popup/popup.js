@@ -40,7 +40,8 @@ function buildMailto() {
 
   const bodyParts = [];
   if (excerpt) bodyParts.push(excerpt);
-  if (pageUrl) bodyParts.push(`Source: ${pageUrl}`);
+  if (pageUrl) bodyParts.push(`${pageUrl}`);
+  bodyParts.push(":end");
   const body = bodyParts.join("\n\n");
 
   return `mailto:${encodeURIComponent(category.email)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
@@ -75,5 +76,6 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("send").addEventListener("click", () => {
     const mailto = buildMailto();
     window.open(mailto, "_self");
+    window.close();
   });
 });
