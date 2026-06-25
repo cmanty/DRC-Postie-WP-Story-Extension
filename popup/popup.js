@@ -41,14 +41,10 @@ function buildMailto() {
   const subject = `${selectedTags.join(" ")} ${title}`;
 
   const bodyParts = [];
-  if (pageUrl && excerpt) {
-    const firstWord = excerpt.trim().split(/\s+/)[0];
-    bodyParts.push(excerpt.trim().replace(firstWord, `<a href="${pageUrl}">${firstWord}</a>`));
-  } else {
-    if (excerpt) bodyParts.push(excerpt);
-  }
+  if (excerpt) bodyParts.push(excerpt);
   if (imageUrl) bodyParts.push(`[PostIMG:${imageUrl}]`);
   if (postDate) bodyParts.push(`Date: ${postDate}`);
+  if (pageUrl) bodyParts.push(pageUrl);
   bodyParts.push(":end");
   const body = bodyParts.join("\n\n");
 
