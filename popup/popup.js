@@ -48,7 +48,7 @@ function buildMailto() {
     if (excerpt) bodyParts.push(excerpt);
   }
   if (imageUrl) bodyParts.push(`[PostIMG:${imageUrl}]`);
-  if (postDate) bodyParts.push(`date: ${postDate}`);
+  if (postDate) bodyParts.push(`Date: ${postDate}`);
   bodyParts.push(":end");
   const body = bodyParts.join("\n\n");
 
