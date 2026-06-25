@@ -36,6 +36,7 @@ function buildMailto() {
   const title = document.getElementById("title").value.trim();
   const imageUrl = document.getElementById("image-url").value.trim();
   const excerpt = document.getElementById("excerpt").value.trim();
+  const postDate = document.getElementById("post-date").value;
 
   const subject = `${selectedTags.join(" ")} ${title}`;
 
@@ -47,6 +48,7 @@ function buildMailto() {
     if (excerpt) bodyParts.push(excerpt);
   }
   if (imageUrl) bodyParts.push(`[PostIMG:${imageUrl}]`);
+  if (postDate) bodyParts.push(`date: ${postDate}`);
   bodyParts.push(":end");
   const body = bodyParts.join("\n\n");
 
@@ -70,13 +72,13 @@ document.addEventListener("DOMContentLoaded", () => {
       document.getElementById("type").innerHTML = "<option>Failed to load</option>";
     });
 
-  // Query the last focused non-popup window to get the article tab,
-  // since this page runs in its own detached popup window.
-  chrome.tabs.query({ active: true, windowType: "normal" }, (tabs) => {
-    if (tabs[0]) {
-      pageUrl = tabs[0].url || "";
-      document.getElementById("title").value = tabs[0].title || "";
-    }
+  chrome.windows.getLastFocused({ windowTypes: ["normal"] }, (win) => {
+    chrome.tabs.query({ active: true, windowId: win.id }, (tabs) => {
+      if (tabs[0]) {
+        pageUrl = tabs[0].url || "";
+        document.getElementById("title").value = tabs[0].title || "";
+      }
+    });
   });
 
   document.getElementById("send").addEventListener("click", () => {
